@@ -13,7 +13,7 @@
   <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
-  <title>Airspace | Creative Agency Bootstrap Template</title>
+  <title>Contact US</title>
 
   <!-- Mobile Specific Metas
   ================================================== -->
@@ -138,30 +138,30 @@
 <!-- contact form start -->
 <section class="contact-form">
   <div class="container">
-    <form class="row" id="contact-form">
+    <form class="row" id="contact-form" onsubmit="sendEmail(); reset(); return false ">
       <div class="col-md-6 col-sm-12">
         <div class="block">
           <div class="form-group">
-            <input name="user_name" type="text" class="form-control" placeholder="Your Name">
+            <input name="user_name" type="text" class="form-control" id="name" placeholder="Your Name" required>
           </div>
           <div class="form-group">
-            <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+            <input name="user_email" type="email" class="form-control" id="email" placeholder="Email Address" required>
           </div>
           <div class="form-group">
-            <input name="user_subject" type="text" class="form-control" placeholder="Subject">
+            <input name="user_subject" type="text" class="form-control" id="subject" placeholder="Subject" required>
           </div>
         </div>
       </div>
       <div class="col-md-6 col-sm-12">
         <div class="block">
           <div class="form-group-2">
-            <textarea name="user_message" class="form-control" rows="4" placeholder="Your Message"></textarea>
+            <textarea name="user_message" class="form-control" rows="4" id="message" placeholder="Your Message" required></textarea>
           </div>
           <button class="btn btn-default" type="submit">Send Message</button>
         </div>
       </div>
-      <div class="error" id="error">Sorry Msg dose not sent</div>
-      <div class="success" id="success">Message Sent</div>
+      <!--<div class="error" id="error">Sorry Msg dose not sent</div>
+      <div class="success" id="success">Message Sent</div>-->
     </form>
     <div class="contact-box row">
       <div class="col-md-6 col-sm-12">
@@ -203,8 +203,7 @@
       <div class="col-md-6 mt-5 mt-md-0">
         <div class="block">
           <div class="google-map">
-            <div class="map" id="map_canvas" data-latitude="51.5223477" data-longitude="-0.1622023"
-              data-marker="images/marker.png"></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.899542586151!2d76.72746717525301!3d30.664957188905575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fe955afa88bcf%3A0xab6356114a6f197f!2sIndian%20Institute%20of%20Science%20Education%20and%20Research%20Mohali!5e0!3m2!1sen!2sin!4v1691155027135!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -259,7 +258,8 @@
     <script src="plugins/google-map/map.js"></script>
 
     <script src="js/script.js"></script>
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src= "js/form.js"></script>
     </body>
 
     </html>
